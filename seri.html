@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Seri Detayı - Balsutoon</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #09090d;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+
+header {
+  height: 70px;
+  background: #111116;
+  border-bottom: 1px solid #292932;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 900;
+  color: #ff4fa3;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+}
+
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #ff4fa3;
+}
+
+/* MAIN */
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 6%;
+}
+
+/* SERIES */
+
+.series {
+  display: flex;
+  gap: 35px;
+
+  background: #111116;
+  border: 1px solid #292932;
+  border-radius: 16px;
+
+  padding: 30px;
+}
+
+.cover {
+  width: 230px;
+  min-width: 230px;
+  height: 330px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(145deg, #292932, #17171d);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #777;
+}
+
+.info {
+  padding-top: 5px;
+}
+
+.label {
+  color: #ffd43b;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.description {
+  color: #aaa;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-bottom: 25px;
+}
+
+.tag {
+  background: #1d1d25;
+  border: 1px solid #30303a;
+
+  padding: 7px 11px;
+  border-radius: 6px;
+
+  font-size: 12px;
+}
+
+.rating {
+  color: #ffd43b;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+
+  background: #ff4fa3;
+  color: #fff;
+
+  text-decoration: none;
+
+  padding: 13px 20px;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #ffd43b;
+  color: #111;
+}
+
+/* CHAPTERS */
+
+.chapter-section {
+  margin-top: 45px;
+}
+
+.chapter-title {
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.chapter-title span {
+  color: #ff4fa3;
+}
+
+.chapters {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.chapter {
+  background: #15151b;
+  border: 1px solid #26262e;
+
+  padding: 17px;
+
+  border-radius: 9px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  text-decoration: none;
+  color: #fff;
+}
+
+.chapter:hover {
+  border-color: #ff4fa3;
+}
+
+.chapter-number {
+  color: #ffd43b;
+}
+
+.chapter-date {
+  color: #777;
+  font-size: 12px;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 60px;
+
+  padding: 30px;
+
+  background: #111116;
+
+  border-top: 1px solid #292932;
+
+  text-align: center;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  header {
+    height: auto;
+
+    padding: 18px 5%;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  .series {
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+  }
+
+  .cover {
+    width: 200px;
+    min-width: 200px;
+    height: 290px;
+  }
+
+  .meta {
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .chapter {
+    padding: 14px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<header>
+
+  <div class="logo">
+    BALSUTOON
+  </div>
+
+  <nav>
+
+    <a href="index.html">
+      Ana Sayfa
+    </a>
+
+    <a href="#">
+      Seriler
+    </a>
+
+    <a href="#">
+      Türler
+    </a>
+
+    <a href="#">
+      🔍
+    </a>
+
+    <a href="#">
+      👤 Giriş
+    </a>
+
+  </nav>
+
+</header>
+
+
+<main class="container">
+
+  <section class="series">
+
+    <div class="cover">
+      SERİ KAPAĞI
+    </div>
+
+
+    <div class="info">
+
+      <div class="label">
+        WEBTOON
+      </div>
+
+      <h1>
+        Örnek Webtoon
+      </h1>
+
+      <p class="description">
+
+        Bu alanda serinin açıklaması bulunacak.
+        Hikaye hakkında kısa bilgiler burada
+        gösterilecek.
+
+      </p>
+
+
+      <div class="meta">
+
+        <div class="tag">
+          Romantik
+        </div>
+
+        <div class="tag">
+          Dram
+        </div>
+
+        <div class="tag">
+          Fantastik
+        </div>
+
+      </div>
+
+
+      <div class="rating">
+        ⭐ 9.5 / 10
+      </div>
+
+
+      <a href="#" class="button">
+        📖 İlk Bölümü Oku
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <section class="chapter-section">
+
+    <h2 class="chapter-title">
+      📚 <span>Bölümler</span>
+    </h2>
+
+
+    <div class="chapters">
+
+
+      <a href="#" class="chapter">
+
+        <span>
+          Bölüm 25
+        </span>
+
+        <span class="chapter-date">
+          01.09.2026
+        </span>
+
+      </a>
+
+
+      <a href="#" class="chapter">
+
+        <span>
+          Bölüm 24
+        </span>
+
+        <span class="chapter-date">
+          28.08.2026
+        </span>
+
+      </a>
+
+
+      <a href="#" class="chapter">
+
+        <span>
+          Bölüm 23
+        </span>
+
+        <span class="chapter-date">
+          25.08.2026
+        </span>
+
+      </a>
+
+
+      <a href="#" class="chapter">
+
+        <span>
+          Bölüm 22
+        </span>
+
+        <span class="chapter-date">
+          22.08.2026
+        </span>
+
+      </a>
+
+
+      <a href="#" class="chapter">
+
+        <span>
+          Bölüm 21
+        </span>
+
+        <span class="chapter-date">
+          19.08.2026
+        </span>
+
+      </a>
+
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  © 2026 Balsutoon
+
+</footer>
+
+</body>
+</html>
