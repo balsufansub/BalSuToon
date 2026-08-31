@@ -1,1 +1,524 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balsutoon</title>
 
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #09090d;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+
+header {
+  height: 70px;
+  background: #111116;
+  border-bottom: 1px solid #292932;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 900;
+  color: #ff4fa3;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #ff4fa3;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 430px;
+  padding: 60px 7%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(255,79,163,.22), transparent 35%),
+    radial-gradient(circle at 80% 40%, rgba(255,212,59,.12), transparent 30%),
+    #0b0b0f;
+}
+
+.hero-content {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero-label {
+  color: #ffd43b;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: #ff4fa3;
+}
+
+.hero p {
+  color: #aaa;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 13px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.primary-button {
+  background: #ff4fa3;
+  color: white;
+}
+
+.secondary-button {
+  background: #ffd43b;
+  color: #111;
+}
+
+.hero-cover {
+  position: absolute;
+  right: 8%;
+  width: 230px;
+  height: 320px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #292932, #15151b);
+  border: 2px solid #ff4fa3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  box-shadow: 0 20px 60px rgba(255,79,163,.15);
+}
+
+/* SECTIONS */
+
+.section {
+  max-width: 1250px;
+  margin: auto;
+  padding: 45px 6%;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.section-title h2 {
+  font-size: 23px;
+}
+
+.section-title span {
+  color: #ff4fa3;
+}
+
+.view-all {
+  color: #ffd43b;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: #15151b;
+  border: 1px solid #26262e;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: .2s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #ff4fa3;
+}
+
+.cover {
+  height: 260px;
+  background: linear-gradient(145deg, #292932, #17171d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+}
+
+.card-info {
+  padding: 13px;
+}
+
+.card h3 {
+  font-size: 15px;
+  margin-bottom: 7px;
+}
+
+.rating {
+  color: #ffd43b;
+  font-size: 13px;
+}
+
+.chapter {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* CHAPTERS */
+
+.chapter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.chapter-item {
+  background: #15151b;
+  border: 1px solid #26262e;
+  border-radius: 9px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chapter-item:hover {
+  border-color: #ff4fa3;
+}
+
+.chapter-name {
+  font-weight: bold;
+}
+
+.chapter-number {
+  color: #ffd43b;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 40px;
+  padding: 30px;
+  text-align: center;
+  background: #111116;
+  border-top: 1px solid #292932;
+  color: #777;
+  font-size: 13px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-cover {
+    right: 5%;
+    width: 190px;
+    height: 270px;
+  }
+
+  .hero-content {
+    max-width: 55%;
+  }
+}
+
+/* PHONE */
+
+@media (max-width: 600px) {
+
+  header {
+    height: auto;
+    padding: 17px 5%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    gap: 13px;
+  }
+
+  .hero {
+    min-height: 500px;
+    padding: 45px 6%;
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero-cover {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 25px;
+    width: 130px;
+    height: 170px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .cover {
+    height: 190px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">BALSUTOON</div>
+
+  <nav>
+    <a href="#">Ana Sayfa</a>
+    <a href="#">Seriler</a>
+    <a href="#">Türler</a>
+    <a href="#">🔍</a>
+    <a href="#">👤 Giriş</a>
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="hero-label">✨ ÖNE ÇIKAN SERİ</div>
+
+    <h1>
+      Balsutoon'a <span>Hoş Geldin</span>
+    </h1>
+
+    <p>
+      En sevdiğin manga ve webtoonları keşfet.
+      Yeni bölümleri takip et ve Balsutoon topluluğuna katıl.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#" class="primary-button">
+        Seriyi Gör →
+      </a>
+
+      <a href="#" class="secondary-button">
+        ⭐ 9.5
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="hero-cover">
+    SERİ KAPAĞI
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-title">
+
+    <h2>
+      🔥 <span>Popüler</span> Seriler
+    </h2>
+
+    <a href="#" class="view-all">
+      Tümünü Gör →
+    </a>
+
+  </div>
+
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="cover">KAPAK</div>
+      <div class="card-info">
+        <h3>Örnek Webtoon</h3>
+        <div class="rating">⭐ 9.5</div>
+        <div class="chapter">Bölüm 25</div>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <div class="cover">KAPAK</div>
+      <div class="card-info">
+        <h3>Örnek Manga</h3>
+        <div class="rating">⭐ 9.3</div>
+        <div class="chapter">Bölüm 18</div>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <div class="cover">KAPAK</div>
+      <div class="card-info">
+        <h3>Örnek Seri</h3>
+        <div class="rating">⭐ 9.1</div>
+        <div class="chapter">Bölüm 32</div>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <div class="cover">KAPAK</div>
+      <div class="card-info">
+        <h3>Yeni Seri</h3>
+        <div class="rating">⭐ 8.9</div>
+        <div class="chapter">Bölüm 12</div>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <div class="cover">KAPAK</div>
+      <div class="card-info">
+        <h3>Favori Seri</h3>
+        <div class="rating">⭐ 8.7</div>
+        <div class="chapter">Bölüm 20</div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-title">
+
+    <h2>
+      🆕 Yeni <span>Bölümler</span>
+    </h2>
+
+    <a href="#" class="view-all">
+      Tümünü Gör →
+    </a>
+
+  </div>
+
+
+  <div class="chapter-list">
+
+    <div class="chapter-item">
+      <div class="chapter-name">
+        Örnek Webtoon
+      </div>
+
+      <div class="chapter-number">
+        Bölüm 25
+      </div>
+    </div>
+
+
+    <div class="chapter-item">
+      <div class="chapter-name">
+        Örnek Manga
+      </div>
+
+      <div class="chapter-number">
+        Bölüm 18
+      </div>
+    </div>
+
+
+    <div class="chapter-item">
+      <div class="chapter-name">
+        Örnek Seri
+      </div>
+
+      <div class="chapter-number">
+        Bölüm 32
+      </div>
+    </div>
+
+
+    <div class="chapter-item">
+      <div class="chapter-name">
+        Favori Seri
+      </div>
+
+      <div class="chapter-number">
+        Bölüm 20
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  © 2026 Balsutoon
+
+</footer>
+
+</body>
+</html>
