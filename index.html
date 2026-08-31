@@ -13,34 +13,35 @@
 }
 
 body {
-  background: #0b0b0f;
+  background: #09090d;
   color: #fff;
   font-family: Arial, sans-serif;
 }
 
 /* HEADER */
+
 header {
+  height: 70px;
   background: #111116;
   border-bottom: 1px solid #292932;
-  padding: 18px 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 6%;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
 .logo {
   font-size: 27px;
   font-weight: 900;
   color: #ff4fa3;
-  letter-spacing: 1px;
 }
 
 nav {
   display: flex;
-  gap: 22px;
+  gap: 25px;
 }
 
 nav a {
@@ -54,19 +55,31 @@ nav a:hover {
 }
 
 /* HERO */
+
 .hero {
-  min-height: 360px;
-  padding: 80px 7%;
+  min-height: 430px;
+  padding: 60px 7%;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
   background:
-    radial-gradient(circle at 20% 50%, rgba(255,79,163,.18), transparent 35%),
-    radial-gradient(circle at 80% 30%, rgba(255,212,59,.12), transparent 30%),
+    radial-gradient(circle at 20% 50%, rgba(255,79,163,.22), transparent 35%),
+    radial-gradient(circle at 80% 40%, rgba(255,212,59,.12), transparent 30%),
     #0b0b0f;
 }
 
 .hero-content {
-  max-width: 650px;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero-label {
+  color: #ffd43b;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
 }
 
 .hero h1 {
@@ -80,35 +93,61 @@ nav a:hover {
 
 .hero p {
   color: #aaa;
-  font-size: 17px;
   line-height: 1.7;
   margin-bottom: 25px;
 }
 
-.hero-button {
-  display: inline-block;
-  background: #ff4fa3;
-  color: #fff;
-  padding: 13px 23px;
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 13px 20px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 14px;
 }
 
-.hero-button:hover {
+.primary-button {
+  background: #ff4fa3;
+  color: white;
+}
+
+.secondary-button {
   background: #ffd43b;
   color: #111;
 }
 
+.hero-cover {
+  position: absolute;
+  right: 8%;
+  width: 230px;
+  height: 320px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #292932, #15151b);
+  border: 2px solid #ff4fa3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  box-shadow: 0 20px 60px rgba(255,79,163,.15);
+}
+
 /* SECTIONS */
+
 .section {
-  padding: 35px 5%;
+  max-width: 1250px;
+  margin: auto;
+  padding: 45px 6%;
 }
 
 .section-title {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 22px;
 }
 
@@ -116,81 +155,81 @@ nav a:hover {
   font-size: 23px;
 }
 
-.section-title h2 span {
-  color: #ffd43b;
+.section-title span {
+  color: #ff4fa3;
 }
 
 .view-all {
-  color: #ff4fa3;
+  color: #ffd43b;
   text-decoration: none;
   font-size: 14px;
 }
 
 /* CARDS */
+
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 18px;
 }
 
 .card {
   background: #15151b;
-  border: 1px solid #25252d;
+  border: 1px solid #26262e;
   border-radius: 12px;
   overflow: hidden;
   transition: .2s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   border-color: #ff4fa3;
 }
 
 .cover {
-  height: 270px;
-  background: linear-gradient(135deg, #252530, #17171d);
+  height: 260px;
+  background: linear-gradient(145deg, #292932, #17171d);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   color: #777;
-  font-size: 14px;
 }
 
 .card-info {
-  padding: 14px;
+  padding: 13px;
 }
 
 .card h3 {
-  font-size: 16px;
-  margin-bottom: 8px;
+  font-size: 15px;
+  margin-bottom: 7px;
 }
 
 .rating {
   color: #ffd43b;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .chapter {
-  color: #aaa;
-  font-size: 13px;
+  color: #999;
+  font-size: 12px;
   margin-top: 5px;
 }
 
-/* NEW CHAPTERS */
+/* CHAPTERS */
+
 .chapter-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 9px;
 }
 
 .chapter-item {
   background: #15151b;
-  border: 1px solid #25252d;
-  border-radius: 10px;
-  padding: 15px;
+  border: 1px solid #26262e;
+  border-radius: 9px;
+  padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .chapter-item:hover {
@@ -206,46 +245,74 @@ nav a:hover {
 }
 
 /* FOOTER */
+
 footer {
-  margin-top: 50px;
-  padding: 30px 5%;
+  margin-top: 40px;
+  padding: 30px;
+  text-align: center;
   background: #111116;
   border-top: 1px solid #292932;
-  text-align: center;
   color: #777;
   font-size: 13px;
 }
 
-/* MOBILE */
-@media (max-width: 800px) {
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-cover {
+    right: 5%;
+    width: 190px;
+    height: 270px;
+  }
+
+  .hero-content {
+    max-width: 55%;
+  }
+}
+
+/* PHONE */
+
+@media (max-width: 600px) {
+
   header {
+    height: auto;
+    padding: 17px 5%;
     flex-direction: column;
     gap: 15px;
   }
 
   nav {
-    gap: 12px;
+    gap: 13px;
   }
 
   .hero {
-    min-height: 300px;
-    padding: 55px 7%;
+    min-height: 500px;
+    padding: 45px 6%;
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    max-width: 100%;
   }
 
   .hero h1 {
     font-size: 38px;
   }
 
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
+  .hero-cover {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 25px;
+    width: 130px;
+    height: 170px;
   }
 
-  .cover {
-    height: 230px;
-  }
-}
-
-@media (max-width: 450px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -254,10 +321,6 @@ footer {
   .cover {
     height: 190px;
   }
-
-  .card-info {
-    padding: 10px;
-  }
 }
 </style>
 </head>
@@ -265,6 +328,7 @@ footer {
 <body>
 
 <header>
+
   <div class="logo">BALSUTOON</div>
 
   <nav>
@@ -272,29 +336,62 @@ footer {
     <a href="#">Seriler</a>
     <a href="#">Türler</a>
     <a href="#">🔍</a>
-    <a href="#">Giriş</a>
+    <a href="#">👤 Giriş</a>
   </nav>
+
 </header>
 
+
 <section class="hero">
+
   <div class="hero-content">
-    <h1>Hoş Geldin <span>Balsutoon</span>'a</h1>
+
+    <div class="hero-label">✨ ÖNE ÇIKAN SERİ</div>
+
+    <h1>
+      Balsutoon'a <span>Hoş Geldin</span>
+    </h1>
 
     <p>
-      En sevdiğin manga ve webtoonları keşfet,
-      yeni bölümleri kaçırma ve topluluğa katıl.
+      En sevdiğin manga ve webtoonları keşfet.
+      Yeni bölümleri takip et ve Balsutoon topluluğuna katıl.
     </p>
 
-    <a href="#" class="hero-button">Serileri Keşfet →</a>
+    <div class="hero-buttons">
+
+      <a href="#" class="primary-button">
+        Seriyi Gör →
+      </a>
+
+      <a href="#" class="secondary-button">
+        ⭐ 9.5
+      </a>
+
+    </div>
+
   </div>
+
+  <div class="hero-cover">
+    SERİ KAPAĞI
+  </div>
+
 </section>
+
 
 <section class="section">
 
   <div class="section-title">
-    <h2>🔥 <span>Popüler</span> Seriler</h2>
-    <a href="#" class="view-all">Tümünü Gör →</a>
+
+    <h2>
+      🔥 <span>Popüler</span> Seriler
+    </h2>
+
+    <a href="#" class="view-all">
+      Tümünü Gör →
+    </a>
+
   </div>
+
 
   <div class="cards">
 
@@ -307,6 +404,7 @@ footer {
       </div>
     </div>
 
+
     <div class="card">
       <div class="cover">KAPAK</div>
       <div class="card-info">
@@ -315,6 +413,7 @@ footer {
         <div class="chapter">Bölüm 18</div>
       </div>
     </div>
+
 
     <div class="card">
       <div class="cover">KAPAK</div>
@@ -325,6 +424,7 @@ footer {
       </div>
     </div>
 
+
     <div class="card">
       <div class="cover">KAPAK</div>
       <div class="card-info">
@@ -334,38 +434,90 @@ footer {
       </div>
     </div>
 
+
+    <div class="card">
+      <div class="cover">KAPAK</div>
+      <div class="card-info">
+        <h3>Favori Seri</h3>
+        <div class="rating">⭐ 8.7</div>
+        <div class="chapter">Bölüm 20</div>
+      </div>
+    </div>
+
   </div>
+
 </section>
+
 
 <section class="section">
 
   <div class="section-title">
-    <h2>🆕 Yeni <span>Bölümler</span></h2>
-    <a href="#" class="view-all">Tümünü Gör →</a>
+
+    <h2>
+      🆕 Yeni <span>Bölümler</span>
+    </h2>
+
+    <a href="#" class="view-all">
+      Tümünü Gör →
+    </a>
+
   </div>
+
 
   <div class="chapter-list">
 
     <div class="chapter-item">
-      <div class="chapter-name">Örnek Webtoon</div>
-      <div class="chapter-number">Bölüm 25</div>
+      <div class="chapter-name">
+        Örnek Webtoon
+      </div>
+
+      <div class="chapter-number">
+        Bölüm 25
+      </div>
     </div>
 
-    <div class="chapter-item">
-      <div class="chapter-name">Örnek Manga</div>
-      <div class="chapter-number">Bölüm 18</div>
-    </div>
 
     <div class="chapter-item">
-      <div class="chapter-name">Örnek Seri</div>
-      <div class="chapter-number">Bölüm 32</div>
+      <div class="chapter-name">
+        Örnek Manga
+      </div>
+
+      <div class="chapter-number">
+        Bölüm 18
+      </div>
+    </div>
+
+
+    <div class="chapter-item">
+      <div class="chapter-name">
+        Örnek Seri
+      </div>
+
+      <div class="chapter-number">
+        Bölüm 32
+      </div>
+    </div>
+
+
+    <div class="chapter-item">
+      <div class="chapter-name">
+        Favori Seri
+      </div>
+
+      <div class="chapter-number">
+        Bölüm 20
+      </div>
     </div>
 
   </div>
+
 </section>
 
+
 <footer>
-  © 2026 Balsutoon — Tüm hakları saklıdır.
+
+  © 2026 Balsutoon
+
 </footer>
 
 </body>
