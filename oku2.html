@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bölüm 2 - Balsutoon</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #08080c;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  height: 65px;
+  background: #111116;
+  border-bottom: 1px solid #292932;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  color: #ff4fa3;
+  font-size: 25px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.back {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back:hover {
+  color: #ff4fa3;
+}
+
+.title {
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.title small {
+  color: #ffd43b;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.title h1 {
+  font-size: 30px;
+  margin-top: 8px;
+}
+
+.reader {
+  max-width: 800px;
+  margin: auto;
+}
+
+.page {
+  width: 100%;
+  background: #111116;
+  border-bottom: 2px solid #09090d;
+}
+
+.page img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.controls {
+  text-align: center;
+  margin: 30px auto 50px;
+}
+
+.button {
+  display: inline-block;
+
+  background: #ff4fa3;
+  color: #fff;
+
+  text-decoration: none;
+
+  padding: 12px 18px;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.button:hover {
+  background: #ffd43b;
+  color: #111;
+}
+
+.chapter-number {
+  display: inline-block;
+  margin: 0 20px;
+  color: #aaa;
+}
+
+footer {
+  border-top: 1px solid #292932;
+  background: #111116;
+
+  padding: 30px;
+
+  text-align: center;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+  header {
+    padding: 0 5%;
+  }
+
+  .title h1 {
+    font-size: 24px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <a href="index.html" class="logo">
+    BALSUTOON
+  </a>
+
+  <a href="seri.html" class="back">
+    ← Seriye Dön
+  </a>
+
+</header>
+
+
+<section class="title">
+
+  <small>
+    ÖRNEK WEBTOON
+  </small>
+
+  <h1>
+    Bölüm 2
+  </h1>
+
+</section>
+
+
+<main class="reader">
+
+  <div class="page">
+    <img src="5.jpeg" alt="Bölüm 2 Sayfa 1">
+  </div>
+
+  <div class="page">
+    <img src="6.jpeg" alt="Bölüm 2 Sayfa 2">
+  </div>
+
+  <div class="page">
+    <img src="7.jpeg" alt="Bölüm 2 Sayfa 3">
+  </div>
+
+</main>
+
+
+<div class="controls">
+
+  <a href="oku.html" class="button">
+    ← Önceki
+  </a>
+
+  <span class="chapter-number">
+    Bölüm 2
+  </span>
+
+  <a href="#" class="button">
+    Sonraki →
+  </a>
+
+</div>
+
+
+<footer>
+
+  © 2026 Balsutoon
+
+</footer>
+
+</body>
+</html>
